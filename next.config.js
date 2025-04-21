@@ -2,8 +2,17 @@
 const nextConfig = {
   output: 'standalone',
   eslint: {
-    // This will warn but not fail the build
     ignoreDuringBuilds: true,
+  },
+  images: {
+    domains: ['images.pexels.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
